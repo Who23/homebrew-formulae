@@ -3,7 +3,7 @@ class Nchook < Formula
 
   desc "A hook for macos's notification center"
   homepage "https://github.com/who23/nchook"
-  url "http://localhost:8000/nchook-v0.1.0.tar.gz"
+  url "https://github.com/Who23/nchook/releases/download/0.1.0/nchook-v0.1.0.tar.gz"
   sha256 "83c5fcca206fc9738dcbbfa69f42318e7ffbf8042ea7c5118d1a31cdfddc75e0"
   head "https://github.com/who23/nchook.git"
 
