@@ -3,8 +3,8 @@ class Nchook < Formula
 
   desc "A hook for macos's notification center"
   homepage "https://github.com/who23/nchook"
-  url "https://github.com/Who23/nchook/releases/download/0.1.0/nchook-v0.1.0.tar.gz"
-  sha256 "83c5fcca206fc9738dcbbfa69f42318e7ffbf8042ea7c5118d1a31cdfddc75e0"
+  url "https://github.com/Who23/nchook/releases/download/0.1.1/nchook-v0.1.1.tar.gz"
+  sha256 "0a1e95d2ec29a8ae8840bd1965711e91fc18d91de677a85052494bdda668e563"
   head "https://github.com/who23/nchook.git"
 
   depends_on "python@3.9"
