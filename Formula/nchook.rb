@@ -48,8 +48,12 @@ class Nchook < Formula
     </dict>
     </plist>
     EOF
+  end  
+  
+  service do
+    name macos: "#{plist_name}"
   end
-
+  
   def install
     virtualenv_install_with_resources
     (var/"log/nchook").mkpath
