@@ -26,28 +26,11 @@ class Nchook < Formula
     EOF
   end
 
-  def plist; <<~EOF
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{bin}/nchook</string>
-      </array>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>KeepAlive</key>
-      <true/>
-      <key>StandardOutPath</key>
-      <string>#{var}/log/nchook/nchook.out.log</string>
-      <key>StandardErrorPath</key>
-      <string>#{var}/log/nchook/nchook.err.log</string>
-    </dict>
-    </plist>
-    EOF
+  service do
+    run macos: opt_bin/"nchook"
+    keep_alive true
+    log_path "#{var}/log/nchook/nchook.out.log"
+    error_log_path "#{var}/log/nchook/nchook.err.log"
   end
 
   def install
